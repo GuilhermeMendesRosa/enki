@@ -521,10 +521,10 @@ examples/minimal/CMakeFiles/enkiMinimal.dir/clean:
 # Target rules for target examples/playground/CMakeFiles/enkiplayground.dir
 
 # All Build rule for target.
-examples/playground/CMakeFiles/enkiplayground.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 examples/playground/CMakeFiles/enkiplayground.dir/all: examples/playground/CMakeFiles/enkiplayground_autogen_timestamp_deps.dir/all
-examples/playground/CMakeFiles/enkiplayground.dir/all: enki/CMakeFiles/enki.dir/all
 examples/playground/CMakeFiles/enkiplayground.dir/all: examples/playground/CMakeFiles/enkiplayground_autogen.dir/all
+examples/playground/CMakeFiles/enkiplayground.dir/all: enki/CMakeFiles/enki.dir/all
+examples/playground/CMakeFiles/enkiplayground.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/playground/CMakeFiles/enkiplayground.dir/build.make examples/playground/CMakeFiles/enkiplayground.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/playground/CMakeFiles/enkiplayground.dir/build.make examples/playground/CMakeFiles/enkiplayground.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guilherme.mendesrosa/code/enki/build/CMakeFiles --progress-num=31,32,33 "Built target enkiplayground"
@@ -556,8 +556,8 @@ examples/playground/CMakeFiles/enkiplayground.dir/clean:
 # Target rules for target examples/playground/CMakeFiles/enkiplayground_autogen_timestamp_deps.dir
 
 # All Build rule for target.
-examples/playground/CMakeFiles/enkiplayground_autogen_timestamp_deps.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 examples/playground/CMakeFiles/enkiplayground_autogen_timestamp_deps.dir/all: enki/CMakeFiles/enki.dir/all
+examples/playground/CMakeFiles/enkiplayground_autogen_timestamp_deps.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/playground/CMakeFiles/enkiplayground_autogen_timestamp_deps.dir/build.make examples/playground/CMakeFiles/enkiplayground_autogen_timestamp_deps.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/playground/CMakeFiles/enkiplayground_autogen_timestamp_deps.dir/build.make examples/playground/CMakeFiles/enkiplayground_autogen_timestamp_deps.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guilherme.mendesrosa/code/enki/build/CMakeFiles --progress-num= "Built target enkiplayground_autogen_timestamp_deps"
@@ -621,10 +621,10 @@ examples/playground/CMakeFiles/enkiplayground_autogen.dir/clean:
 # Target rules for target examples/visual_test/CMakeFiles/visual_test.dir
 
 # All Build rule for target.
-examples/visual_test/CMakeFiles/visual_test.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
-examples/visual_test/CMakeFiles/visual_test.dir/all: enki/CMakeFiles/enki.dir/all
 examples/visual_test/CMakeFiles/visual_test.dir/all: examples/visual_test/CMakeFiles/visual_test_autogen_timestamp_deps.dir/all
 examples/visual_test/CMakeFiles/visual_test.dir/all: examples/visual_test/CMakeFiles/visual_test_autogen.dir/all
+examples/visual_test/CMakeFiles/visual_test.dir/all: enki/CMakeFiles/enki.dir/all
+examples/visual_test/CMakeFiles/visual_test.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/visual_test/CMakeFiles/visual_test.dir/build.make examples/visual_test/CMakeFiles/visual_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/visual_test/CMakeFiles/visual_test.dir/build.make examples/visual_test/CMakeFiles/visual_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guilherme.mendesrosa/code/enki/build/CMakeFiles --progress-num=55,56,57,58 "Built target visual_test"
@@ -656,10 +656,10 @@ examples/visual_test/CMakeFiles/visual_test.dir/clean:
 # Target rules for target examples/visual_test/CMakeFiles/basic_example.dir
 
 # All Build rule for target.
-examples/visual_test/CMakeFiles/basic_example.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
-examples/visual_test/CMakeFiles/basic_example.dir/all: enki/CMakeFiles/enki.dir/all
 examples/visual_test/CMakeFiles/basic_example.dir/all: examples/visual_test/CMakeFiles/basic_example_autogen_timestamp_deps.dir/all
 examples/visual_test/CMakeFiles/basic_example.dir/all: examples/visual_test/CMakeFiles/basic_example_autogen.dir/all
+examples/visual_test/CMakeFiles/basic_example.dir/all: enki/CMakeFiles/enki.dir/all
+examples/visual_test/CMakeFiles/basic_example.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/visual_test/CMakeFiles/basic_example.dir/build.make examples/visual_test/CMakeFiles/basic_example.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/visual_test/CMakeFiles/basic_example.dir/build.make examples/visual_test/CMakeFiles/basic_example.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guilherme.mendesrosa/code/enki/build/CMakeFiles --progress-num=1,2,3,4 "Built target basic_example"
@@ -691,8 +691,8 @@ examples/visual_test/CMakeFiles/basic_example.dir/clean:
 # Target rules for target examples/visual_test/CMakeFiles/visual_test_autogen_timestamp_deps.dir
 
 # All Build rule for target.
-examples/visual_test/CMakeFiles/visual_test_autogen_timestamp_deps.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 examples/visual_test/CMakeFiles/visual_test_autogen_timestamp_deps.dir/all: enki/CMakeFiles/enki.dir/all
+examples/visual_test/CMakeFiles/visual_test_autogen_timestamp_deps.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/visual_test/CMakeFiles/visual_test_autogen_timestamp_deps.dir/build.make examples/visual_test/CMakeFiles/visual_test_autogen_timestamp_deps.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/visual_test/CMakeFiles/visual_test_autogen_timestamp_deps.dir/build.make examples/visual_test/CMakeFiles/visual_test_autogen_timestamp_deps.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guilherme.mendesrosa/code/enki/build/CMakeFiles --progress-num= "Built target visual_test_autogen_timestamp_deps"
@@ -756,8 +756,8 @@ examples/visual_test/CMakeFiles/visual_test_autogen.dir/clean:
 # Target rules for target examples/visual_test/CMakeFiles/basic_example_autogen_timestamp_deps.dir
 
 # All Build rule for target.
-examples/visual_test/CMakeFiles/basic_example_autogen_timestamp_deps.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 examples/visual_test/CMakeFiles/basic_example_autogen_timestamp_deps.dir/all: enki/CMakeFiles/enki.dir/all
+examples/visual_test/CMakeFiles/basic_example_autogen_timestamp_deps.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/visual_test/CMakeFiles/basic_example_autogen_timestamp_deps.dir/build.make examples/visual_test/CMakeFiles/basic_example_autogen_timestamp_deps.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/visual_test/CMakeFiles/basic_example_autogen_timestamp_deps.dir/build.make examples/visual_test/CMakeFiles/basic_example_autogen_timestamp_deps.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guilherme.mendesrosa/code/enki/build/CMakeFiles --progress-num= "Built target basic_example_autogen_timestamp_deps"
@@ -821,10 +821,10 @@ examples/visual_test/CMakeFiles/basic_example_autogen.dir/clean:
 # Target rules for target examples/socket_control/CMakeFiles/enkiSocketControl.dir
 
 # All Build rule for target.
-examples/socket_control/CMakeFiles/enkiSocketControl.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
-examples/socket_control/CMakeFiles/enkiSocketControl.dir/all: enki/CMakeFiles/enki.dir/all
 examples/socket_control/CMakeFiles/enkiSocketControl.dir/all: examples/socket_control/CMakeFiles/enkiSocketControl_autogen_timestamp_deps.dir/all
 examples/socket_control/CMakeFiles/enkiSocketControl.dir/all: examples/socket_control/CMakeFiles/enkiSocketControl_autogen.dir/all
+examples/socket_control/CMakeFiles/enkiSocketControl.dir/all: enki/CMakeFiles/enki.dir/all
+examples/socket_control/CMakeFiles/enkiSocketControl.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/socket_control/CMakeFiles/enkiSocketControl.dir/build.make examples/socket_control/CMakeFiles/enkiSocketControl.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/socket_control/CMakeFiles/enkiSocketControl.dir/build.make examples/socket_control/CMakeFiles/enkiSocketControl.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guilherme.mendesrosa/code/enki/build/CMakeFiles --progress-num=27,28,29 "Built target enkiSocketControl"
@@ -856,8 +856,8 @@ examples/socket_control/CMakeFiles/enkiSocketControl.dir/clean:
 # Target rules for target examples/socket_control/CMakeFiles/enkiSocketControl_autogen_timestamp_deps.dir
 
 # All Build rule for target.
-examples/socket_control/CMakeFiles/enkiSocketControl_autogen_timestamp_deps.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 examples/socket_control/CMakeFiles/enkiSocketControl_autogen_timestamp_deps.dir/all: enki/CMakeFiles/enki.dir/all
+examples/socket_control/CMakeFiles/enkiSocketControl_autogen_timestamp_deps.dir/all: viewer/CMakeFiles/enkiviewer.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/socket_control/CMakeFiles/enkiSocketControl_autogen_timestamp_deps.dir/build.make examples/socket_control/CMakeFiles/enkiSocketControl_autogen_timestamp_deps.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/socket_control/CMakeFiles/enkiSocketControl_autogen_timestamp_deps.dir/build.make examples/socket_control/CMakeFiles/enkiSocketControl_autogen_timestamp_deps.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/guilherme.mendesrosa/code/enki/build/CMakeFiles --progress-num= "Built target enkiSocketControl_autogen_timestamp_deps"

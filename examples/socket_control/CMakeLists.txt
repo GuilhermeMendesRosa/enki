@@ -9,10 +9,12 @@ find_package(Qt5Xml REQUIRED)
 find_package(Qt5Network REQUIRED)
 
 if(Qt5Core_FOUND AND Qt5Widgets_FOUND AND Qt5OpenGL_FOUND AND Qt5Xml_FOUND AND Qt5Network_FOUND)
-    # Habilitar MOC automático
-    set(CMAKE_AUTOMOC ON)
     
-    add_executable(enkiSocketControl enkiSocketControl.cpp)
+    add_executable(enkiSocketControl enkiSocketControl.cpp enkiSocketControl.h)
+    
+    # Habilitar MOC apenas para este target
+    set_target_properties(enkiSocketControl PROPERTIES AUTOMOC ON)
+    
     target_link_libraries(enkiSocketControl enki enkiviewer)
     
     # Link Qt5 libraries

@@ -24,6 +24,15 @@ protected:
     int stepCounter;
     bool verbose;
     
+    // Sistema de movimento por distância
+    bool isMoving;
+    double targetDistance;
+    double currentDistance;
+    Point startPosition;
+    double startAngle;
+    QString currentMovementType;
+    double pendingMoveDistance; // Para armazenar distância após rotação
+    
 public:
     SocketControlExample(World *world, QWidget *parent = 0);
     ~SocketControlExample();
@@ -34,6 +43,9 @@ public:
     void processCommand(const QString& command);
     void sendResponse(const QString& message);
     void sendRobotStatus();
+    void executeMovementSequence(const QStringList& movements);
+    void checkMovementProgress();
+    void stopRobot();
     
 public slots:
     void onNewConnection();

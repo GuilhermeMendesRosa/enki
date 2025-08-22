@@ -733,6 +733,7 @@
   /Users/guilherme.mendesrosa/code/enki/enki/interactions/IRSensor.h \
   /Users/guilherme.mendesrosa/code/enki/enki/robots/DifferentialWheeled.h \
   /Users/guilherme.mendesrosa/code/enki/enki/robots/e-puck/EPuck.h \
+  /Users/guilherme.mendesrosa/code/enki/examples/socket_control/enkiSocketControl.h \
   /Users/guilherme.mendesrosa/code/enki/viewer/Viewer.h \
   /opt/homebrew/Cellar/qt@5/5.15.17/lib/QtCore.framework/Versions/5/Headers/QMap \
   /opt/homebrew/Cellar/qt@5/5.15.17/lib/QtCore.framework/Versions/5/Headers/QPoint \

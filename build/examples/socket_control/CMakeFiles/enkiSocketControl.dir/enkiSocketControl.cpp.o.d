@@ -1,5 +1,6 @@
 examples/socket_control/CMakeFiles/enkiSocketControl.dir/enkiSocketControl.cpp.o: \
   /Users/guilherme.mendesrosa/code/enki/examples/socket_control/enkiSocketControl.cpp \
+  /Users/guilherme.mendesrosa/code/enki/examples/socket_control/enkiSocketControl.h \
   /Users/guilherme.mendesrosa/code/enki/viewer/Viewer.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/typeinfo \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \

@@ -3,12 +3,16 @@
 Script de Controle do Robô E-Puck via Socket
 
 Este script se conecta ao programa Enki via TCP e permite controlar
-o movimento do robô E-Puck através de comandos simples.
+o movimento do robô E-Puck através de comandos de sequência.
 
-Comandos disponíveis:
-- forward [velocidade] - move para frente
-- turn_left [velocidade] - vira à esquerda  
-- turn_right [velocidade] - vira à direita
+Formato de comandos:
+- XF;YB;ZL;WR - onde X,Y,Z,W são números e F=frente, B=trás, L=esquerda, R=direita
+- Exemplos:
+  * "10F" - move 10 unidades para frente
+  * "10F;5R" - move 10 para frente e 5 para direita
+  * "23B;7L;8R" - move 23 para trás, 7 para esquerda e 8 para direita
+
+Comandos especiais:
 - stop - para o robô
 - status - mostra posição e estado atual
 - help - mostra esta ajuda
@@ -86,20 +90,51 @@ class EnkiRobotController:
         self.connected = False
         print("Desconectado.")
     
+    def validate_movement_command(self, command):
+        """Valida se o comando está no formato correto XF;YB;ZL;WR"""
+        import re
+        
+        # Permitir comandos especiais
+        if command.lower() in ['stop', 'status', 'quit', 'help']:
+            return True
+        
+        # Padrão para movimentos: número seguido de F, B, L ou R
+        pattern = r'^\d+(\.\d+)?[FBLR]$'
+        
+        # Dividir por ; e validar cada parte
+        movements = command.upper().split(';')
+        
+        for movement in movements:
+            movement = movement.strip()
+            if not movement:
+                continue
+            if not re.match(pattern, movement):
+                return False
+        
+        return len(movements) > 0
+    
     def interactive_mode(self):
         """Modo interativo para controle manual"""
-        print("\n" + "="*50)
-        print("🤖 CONTROLE INTERATIVO DO E-PUCK")
-        print("="*50)
-        print("Comandos disponíveis:")
-        print("  forward [vel]    - mover para frente (vel padrão: 5)")
-        print("  turn_left [vel]  - virar à esquerda (vel padrão: 3)")
-        print("  turn_right [vel] - virar à direita (vel padrão: 3)")
-        print("  stop             - parar robô")
-        print("  status           - mostrar posição atual")
-        print("  help             - mostrar esta ajuda")
-        print("  quit             - sair")
-        print("="*50)
+        print("\n" + "="*60)
+        print("🤖 CONTROLADOR DO ROBÔ E-PUCK")
+        print("="*60)
+        print("Digite comandos no formato: XF;YB;ZL;WR")
+        print("\n📋 LEGENDA:")
+        print("  F = Forward (frente)")
+        print("  B = Backward (trás)")  
+        print("  L = Left (esquerda)")
+        print("  R = Right (direita)")
+        print("  X,Y,Z,W = números (distâncias)")
+        print("\n✨ EXEMPLOS:")
+        print("  10F          → mover 10 unidades para frente")
+        print("  10F;5R       → mover 10 para frente e 5 para direita")
+        print("  23B;7L;8R    → mover 23 para trás, 7 esquerda, 8 direita")
+        print("\n🔧 COMANDOS ESPECIAIS:")
+        print("  stop    → parar robô")
+        print("  status  → mostrar posição atual")
+        print("  help    → mostrar ajuda")
+        print("  quit    → sair")
+        print("="*60)
         
         while self.connected and self.running:
             try:
@@ -113,66 +148,40 @@ class EnkiRobotController:
                     break
                     
                 elif command.lower() == 'help':
-                    print("\nComandos:")
-                    print("  forward [velocidade] - ex: 'forward 10'")
-                    print("  turn_left [velocidade] - ex: 'turn_left 5'")
-                    print("  turn_right [velocidade] - ex: 'turn_right 5'")
-                    print("  stop - parar o robô")
-                    print("  status - ver posição atual")
+                    print("\n📋 FORMATO: XF;YB;ZL;WR")
+                    print("✨ EXEMPLOS:")
+                    print("  5F      → frente 5 unidades")
+                    print("  3B      → trás 3 unidades") 
+                    print("  2L      → esquerda 2 unidades")
+                    print("  4R      → direita 4 unidades")
+                    print("  10F;5R  → frente 10 + direita 5")
+                    print("  8B;3L   → trás 8 + esquerda 3")
                     continue
-                    
-                # Enviar comando
-                self.send_command(command)
-                time.sleep(0.1)  # Pequena pausa para não sobrecarregar
+                elif command.lower() in ['stop', 'status']:
+                    self.send_command(command)
+                    time.sleep(0.1)
+                    continue
+                
+                # Validar formato do comando
+                if self.validate_movement_command(command):
+                    self.send_command(command)
+                    time.sleep(0.1)
+                else:
+                    print("❌ Formato inválido!")
+                    print("💡 Use: XF;YB;ZL;WR (ex: 10F;5R)")
+                    print("   Digite 'help' para ver mais exemplos.")
                 
             except KeyboardInterrupt:
-                print("\n\nInterrompido pelo usuário.")
+                print("\n\nSaindo...")
                 break
             except EOFError:
-                print("\nFim da entrada.")
+                print("\nSaindo...")
                 break
     
-    def demo_mode(self):
-        """Modo demonstração com sequência automática"""
-        print("\n🎬 MODO DEMONSTRAÇÃO")
-        print("Executando sequência automática...")
-        
-        demo_commands = [
-            ("status", "Verificando posição inicial"),
-            ("forward 8", "Movendo para frente por 3 segundos"),
-            ("turn_left 4", "Virando à esquerda por 2 segundos"),
-            ("forward 6", "Movendo para frente novamente por 3 segundos"),
-            ("turn_right 4", "Virando à direita por 2 segundos"),
-            ("forward 5", "Movimento final para frente por 2 segundos"),
-            ("stop", "Parando o robô"),
-            ("status", "Posição final")
-        ]
-        
-        for command, description in demo_commands:
-            if not self.connected:
-                break
-                
-            print(f"\n📍 {description}")
-            print(f"Comando: {command}")
-            
-            self.send_command(command)
-            
-            # Tempo de espera baseado no comando
-            if "forward" in command or "turn" in command:
-                time.sleep(3)
-            else:
-                time.sleep(1)
-        
-        print("\n✓ Demonstração concluída!")
+
 
 def main():
     controller = EnkiRobotController()
-    
-    # Verificar argumentos da linha de comando
-    if len(sys.argv) > 1 and sys.argv[1] == 'demo':
-        demo_mode = True
-    else:
-        demo_mode = False
     
     print("🚀 Iniciando controlador do robô E-Puck...")
     
@@ -184,10 +193,8 @@ def main():
         # Aguardar mensagens de boas-vindas
         time.sleep(0.5)
         
-        if demo_mode:
-            controller.demo_mode()
-        else:
-            controller.interactive_mode()
+        # Sempre usar modo interativo
+        controller.interactive_mode()
             
     finally:
         controller.disconnect()

@@ -477,5 +477,5 @@ OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_glu_LIBRARY
 OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
-SDL2_LIBRARY_TEMP:INTERNAL=/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2.dylib;-framework Cocoa;-framework Cocoa;-framework Cocoa;-framework Cocoa;-framework Cocoa;-framework Cocoa
+SDL2_LIBRARY_TEMP:INTERNAL=/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2main.a;/opt/homebrew/lib/libSDL2.dylib;-framework Cocoa;-framework Cocoa;-framework Cocoa;-framework Cocoa;-framework Cocoa;-framework Cocoa;-framework Cocoa;-framework Cocoa
 

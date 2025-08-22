@@ -23,7 +23,15 @@
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "/Users/guilherme.mendesrosa/code/enki/build/examples/socket_control/enkiSocketControl_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "enkiSocketControl_autogen/timestamp",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"/Users/guilherme.mendesrosa/code/enki/examples/socket_control/enkiSocketControl.h",
+			"Mu",
+			"EWIEGA46WW/moc_enkiSocketControl.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/Users/guilherme.mendesrosa/code/enki/build/examples/socket_control/enkiSocketControl_autogen/include",
 	"MOC_COMPILATION_FILE" : "/Users/guilherme.mendesrosa/code/enki/build/examples/socket_control/enkiSocketControl_autogen/mocs_compilation.cpp",
