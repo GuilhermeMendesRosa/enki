@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/enkiMinimal.dir/enkiMinimal.cpp.o -o enkiMinimal   -L/Users/guilherme.mendesrosa/code/enki/build  -Wl,-rpath,/Users/guilherme.mendesrosa/code/enki/build ../../enki/libenki.a

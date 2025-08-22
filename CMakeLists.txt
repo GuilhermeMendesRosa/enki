@@ -1,5 +1,4 @@
-cmake_minimum_required(VERSION 2.8.11)
-
+cmake_minimum_required(VERSION 4.1)
 project(Enki)
 
 # additional CMake modules

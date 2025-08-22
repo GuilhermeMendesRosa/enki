@@ -1,0 +1,16 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/guilherme.mendesrosa/code/enki/build/cmake_install.cmake",
+		"/Users/guilherme.mendesrosa/code/enki/build/enki/cmake_install.cmake",
+		"/Users/guilherme.mendesrosa/code/enki/build/viewer/cmake_install.cmake",
+		"/Users/guilherme.mendesrosa/code/enki/build/python/cmake_install.cmake",
+		"/Users/guilherme.mendesrosa/code/enki/build/tests/cmake_install.cmake",
+		"/Users/guilherme.mendesrosa/code/enki/build/examples/cmake_install.cmake",
+		"/Users/guilherme.mendesrosa/code/enki/build/examples/minimal/cmake_install.cmake",
+		"/Users/guilherme.mendesrosa/code/enki/build/examples/playground/cmake_install.cmake",
+		"/Users/guilherme.mendesrosa/code/enki/build/examples/visual_test/cmake_install.cmake",
+		"/Users/guilherme.mendesrosa/code/enki/build/examples/socket_control/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
